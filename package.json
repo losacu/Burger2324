@@ -1,0 +1,25 @@
+{
+  "name": "burger2324",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web + panel de administración de Burger 2324 (Mercedes, Bs. As.)",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --no-warnings=ExperimentalWarning server.js",
+    "dev": "node --no-warnings=ExperimentalWarning --watch server.js",
+    "seed": "node --no-warnings=ExperimentalWarning src/seed.js",
+    "reset-password": "node --no-warnings=ExperimentalWarning src/reset-password.js",
+    "build:static": "node --no-warnings=ExperimentalWarning scripts/build-static.js",
+    "export-seed": "node --no-warnings=ExperimentalWarning scripts/export-seed.js",
+    "import-backup": "node --no-warnings=ExperimentalWarning scripts/import-backup.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.2.1",
+    "express-session": "^1.18.1",
+    "multer": "^2.0.2"
+  }
+}

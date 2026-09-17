@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Panel · Burger 2324</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/admin/admin.css" />
+  </head>
+  <body>
+    <div id="login" class="login" hidden>
+      <form class="login-card" id="loginForm">
+        <img src="/assets/brand-02.jpg" alt="Burger 2324" width="96" height="96" />
+        <h1>Panel de Burger 2324</h1>
+        <p>Ingresá para administrar la carta, los pedidos y la información del local.</p>
+        <label>Usuario<input name="username" autocomplete="username" required /></label>
+        <label>Contraseña<input name="password" type="password" autocomplete="current-password" required /></label>
+        <div class="login-error" id="loginError" hidden></div>
+        <button class="btn primary" type="submit">ENTRAR</button>
+      </form>
+    </div>
+
+    <div id="app" class="app" hidden>
+      <aside class="sidebar">
+        <a class="side-brand" href="#/"><img src="/assets/brand-02.jpg" alt="" width="44" height="44" /><span>Burger 2324<small>Panel</small></span></a>
+        <nav id="sideNav">
+          <a href="#/" data-route="dashboard">🏠 Inicio</a>
+          <a href="#/pedidos" data-route="orders">🧾 Pedidos <span class="pill" id="pendingPill" hidden></span></a>
+          <a href="#/productos" data-route="products">🍔 Productos</a>
+          <a href="#/categorias" data-route="categories">📂 Categorías</a>
+          <a href="#/promos" data-route="promos">🏷️ Promos</a>
+          <a href="#/galeria" data-route="gallery">🖼️ Galería</a>
+          <a href="#/configuracion" data-route="settings">⚙️ Configuración</a>
+          <a href="#/cuenta" data-route="account">🔐 Cuenta</a>
+        </nav>
+        <div class="side-foot">
+          <a class="btn ghost small" href="/" target="_blank" rel="noreferrer">Ver sitio ↗</a>
+          <button class="btn ghost small" id="logoutBtn" type="button">Salir</button>
+        </div>
+      </aside>
+      <div class="main">
+        <header class="topbar">
+          <button class="menu-btn" id="menuBtn" type="button" aria-label="Menú">☰</button>
+          <h2 id="pageTitle">Inicio</h2>
+          <div class="status-quick" id="statusQuick"></div>
+        </header>
+        <main id="view" class="view"></main>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="modal" hidden><div class="modal" role="dialog" aria-modal="true" id="modalBox"></div></div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="/admin/admin.js" defer></script>
+  </body>
+</html>
